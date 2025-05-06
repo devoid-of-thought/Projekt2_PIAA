@@ -7,7 +7,7 @@ class Graf {
 public:
     std::vector<int> macierz;
     int rozmiar;
-    void generujGraf(int r, double gestosc,int seed);
+    void generujGraf(int r, double gestosc);
     void pokażGraf();
     double Gęstość();
 };
