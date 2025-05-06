@@ -40,9 +40,9 @@ void test_poprawności() {
     }
 }
 void test_spr() {
-    ofstream dijkstra_wyniki("/home/userbrigh/CLionProjects/Projekt2_PIAA/dijkstra.csv");
-    ofstream bellman_wyniki("/home/userbrigh/CLionProjects/Projekt2_PIAA/bellman.csv");
-    ofstream dfs_wyniki("/home/userbrigh/CLionProjects/Projekt2_PIAA/dfs.csv");
+    ofstream dijkstra_wyniki("dijkstra.csv");
+    ofstream bellman_wyniki("bellman.csv");
+    ofstream dfs_wyniki("dfs.csv");
 
     dijkstra_wyniki << "gestosc/rozmiar";
     bellman_wyniki << "gestosc/rozmiary";
