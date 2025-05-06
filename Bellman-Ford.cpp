@@ -1,6 +1,5 @@
 #include "Graf.h"
 #include <vector>
-#include "Lista.h"
 using namespace std;
 
 vector<int> BellmanFord(Graf& graf, int start) {

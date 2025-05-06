@@ -6,7 +6,6 @@
 #include "Dikstrja.h"
 #include "BellmanFord.h"
 #include "DFS.h"
-#include "Lista.h"
 
 using namespace std;
 int rozmiary[] = {10, 50, 100, 200, 500};

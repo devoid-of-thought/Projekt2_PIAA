@@ -1,7 +1,6 @@
 #include <vector>
 #include <limits>
 #include "Graf.h"
-#include "Lista.h"
 using namespace std;
 //Algorym dijkstry
 vector<int> Dijkstra(Graf& graf, int start) {
