@@ -1,0 +1,3 @@
+/home/userbrigh/CLionProjects/Projekt2_PIAA/cmake-build-debug/CMakeFiles/Projekt2_PIAA.dir
+/home/userbrigh/CLionProjects/Projekt2_PIAA/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/userbrigh/CLionProjects/Projekt2_PIAA/cmake-build-debug/CMakeFiles/rebuild_cache.dir

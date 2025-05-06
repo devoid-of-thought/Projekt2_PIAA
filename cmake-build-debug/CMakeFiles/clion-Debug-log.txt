@@ -1,0 +1,4 @@
+/home/userbrigh/Downloads/clion-2024.1.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/userbrigh/Downloads/clion-2024.1.3/bin/ninja/linux/x64/ninja -G Ninja -S /home/userbrigh/CLionProjects/Projekt2_PIAA -B /home/userbrigh/CLionProjects/Projekt2_PIAA/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/userbrigh/CLionProjects/Projekt2_PIAA/cmake-build-debug
