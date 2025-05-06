@@ -1,5 +1,4 @@
 #include <vector>
-#include <limits>
 #include "Graf.h"
 using namespace std;
 //Algorym dijkstry
