@@ -12,4 +12,6 @@ add_executable(Projekt2_PIAA main.cpp
         BellmanFord.h
         DFS.cpp
         DFS.h
+        Lista.cpp
+        Lista.h
 )
