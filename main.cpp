@@ -60,17 +60,17 @@ void test_poprawności() {
     }
 }
 void test_spr() {
-    ofstream dijkstra_wyniki_L("dijkstra.csv");
-    ofstream bellman_wyniki_L("bellman.csv");
-    ofstream dfs_wyniki_L("dfs.csv");
+    ofstream dijkstra_wyniki_L("/home/userbrigh/CLionProjects/Projekt2_PIAA/dijkstra.csv");
+    ofstream bellman_wyniki_L("/home/userbrigh/CLionProjects/Projekt2_PIAA/bellman.csv");
+    ofstream dfs_wyniki_L("/home/userbrigh/CLionProjects/Projekt2_PIAA/dfs.csv");
 
     dijkstra_wyniki_L << "gestosc/rozmiar";
     bellman_wyniki_L << "gestosc/rozmiar";
     dfs_wyniki_L << "gestosc/rozmiar";
 
-    ofstream dijkstra_wyniki_M("dijkstra_M.csv");
-    ofstream bellman_wyniki_M("bellman_M.csv");
-    ofstream dfs_wyniki_M("dfs_M.csv");
+    ofstream dijkstra_wyniki_M("/home/userbrigh/CLionProjects/Projekt2_PIAA/dijkstra_M.csv");
+    ofstream bellman_wyniki_M("/home/userbrigh/CLionProjects/Projekt2_PIAA/bellman_M.csv");
+    ofstream dfs_wyniki_M("/home/userbrigh/CLionProjects/Projekt2_PIAA/dfs_M.csv");
 
     dijkstra_wyniki_M << "gestosc/rozmiar";
     bellman_wyniki_M << "gestosc/rozmiar";
@@ -98,6 +98,9 @@ void test_spr() {
         dijkstra_wyniki_L << gestosci[g];
         bellman_wyniki_L << gestosci[g];
         dfs_wyniki_L << gestosci[g];
+         dijkstra_wyniki_M << gestosci[g];
+        bellman_wyniki_M << gestosci[g];
+        dfs_wyniki_M << gestosci[g];
 
         for (int r = 0; r < 5; r++) {
             long long suma_D1 = 0, suma_B1 = 0, suma_DFS1 = 0;
@@ -156,6 +159,9 @@ void test_spr() {
         dijkstra_wyniki_L << "\n";
         bellman_wyniki_L << "\n";
         dfs_wyniki_L << "\n";
+        dijkstra_wyniki_M << "\n";
+        bellman_wyniki_M << "\n";
+        dfs_wyniki_M << "\n";
     }
 
     dijkstra_wyniki_L.close();
@@ -170,7 +176,7 @@ void test_spr() {
 
 
 int main() {
-    //test_spr();
-    test_poprawności();
+    test_spr();
+    //test_poprawności();
      return 0;
 }

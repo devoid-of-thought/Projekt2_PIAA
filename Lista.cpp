@@ -20,10 +20,10 @@ void Lista::generujGraf(int r, double gestosc,int seed) {
 
     static mt19937 rng(seed);
     uniform_real_distribution<double> prob_dist(0.0, 1.0);
-    uniform_int_distribution<int> weight_dist(1, 10000000);
+    uniform_int_distribution<int> weight_dist(1, 10);
 
-    for(int u = 0; u < r; ++u) {
-        for(int v = u + 1; v < r; ++v) {
+    for(int u = 0; u < r; u++) {
+        for(int v = u + 1; v < r; v++) {
             if(prob_dist(rng) < gestosc) {
                 int weight = weight_dist(rng);
                 lista[u].emplace_back(v, weight);
@@ -31,17 +31,14 @@ void Lista::generujGraf(int r, double gestosc,int seed) {
         }
     }
 }
+
 void Lista::pokażGraf() {
-    cout << "Graph Structure (Adjacency List):\n";
-    for(int node = 0; node < rozmiar; ++node) {
-        cout << "Node " << node << " connected to: ";
-        if(lista[node].empty()) {
-            cout << "No connections";
-        }
-        else {
-            for(auto& [neighbor, weight] : lista[node]) {
-                cout << neighbor << "(W:" << weight << ") ";
-            }
+    cout << "Lista sąsiedztwa:\n";
+    for(int i = 0; i < rozmiar; i++) {
+        cout << "Wierzchołek " << i << "p ołączony z: ";
+            for(auto& [sąsiad, waga] : lista[i]) {
+                cout << sąsiad << "(W:" << waga << ") ";
+
         }
         cout << "\n";
     }
@@ -52,8 +49,8 @@ void Lista::macierzDoListy(const Graf& graf, Lista& lista) {
     lista.lista.clear();
     lista.lista.resize(graf.rozmiar);
 
-    for (int u = 0; u < graf.rozmiar; ++u) {
-        for (int v = 0; v < graf.rozmiar; ++v) {
+    for (int u = 0; u < graf.rozmiar; u++) {
+        for (int v = 0; v < graf.rozmiar; v++) {
             int waga = graf.macierz[u * graf.rozmiar + v];
             if (waga != 0) {
                 lista.lista[u].emplace_back(v, waga);

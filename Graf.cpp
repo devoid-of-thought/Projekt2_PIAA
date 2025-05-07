@@ -22,8 +22,8 @@ void Graf::generujGraf(int r, double gestosc) {
     uniform_real_distribution<float> prob_dist(0.0f, 1.0f);
     uniform_int_distribution<int> weight_dist(1, 10);
     //generowanie krawędzi
-    for (int i = 0; i < rozmiar; ++i) {
-        for (int j = 0; j < rozmiar; ++j) {
+    for (int i = 0; i < rozmiar; i++) {
+        for (int j = 0; j < rozmiar; i++) {
             if (i != j && prob_dist(rng) < gestosc) {
                 macierz[i * rozmiar + j] = weight_dist(rng);
             }
@@ -32,8 +32,8 @@ void Graf::generujGraf(int r, double gestosc) {
 }
 //wyświetlanie macierzy sąsiedztwa
 void Graf::pokażGraf(){
-    for (int i = 0; i < rozmiar; ++i) {
-        for (int j = 0; j < rozmiar; ++j) {
+    for (int i = 0; i < rozmiar; i++) {
+        for (int j = 0; j < rozmiar; i++) {
             cout << macierz[i * rozmiar + j] << " ";
         }
         cout << '\n';
@@ -46,8 +46,8 @@ double Graf::Gęstość() {
     int max_E = rozmiar * (rozmiar - 1);
     int ilość_E = 0;
 
-    for (int i = 0; i < rozmiar; ++i) {
-        for (int j = 0; j < rozmiar; ++j) {
+    for (int i = 0; i < rozmiar; i++) {
+        for (int j = 0; j < rozmiar;i++) {
             if (i != j && macierz[i * rozmiar + j] != 0) {
                 ilość_E++;
             }
